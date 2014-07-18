@@ -1,0 +1,9 @@
+module.exports = {
+	server: "MY-PC",
+	userName: "test",
+	password: "test",
+	options: {
+		namedInstance: "SQLEXPRESS",
+		database: "Ooo"
+	}
+};
