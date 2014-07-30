@@ -157,6 +157,34 @@ describe("Advanced Query Test using Miss Constructor", function () {
 			);
 		});
 	});
+
+	describe("#connectionPool", function () {
+		it("should create & use a connection pool when using the constructor form", function (done) {
+			var counter = 0;
+
+			var callback = function (err, results) {
+				if (err) { console.log(err); }
+
+				counter = counter + 1;
+				if (counter === 5) {
+					// since we opened 5 connections in rapid succession,
+					// we should have 5 connections in our pool
+					assert.equal(5, ms.connectionPool.pool.getPoolSize());
+					done();
+				}
+			};
+
+
+			for (var i = 0; i < 5; i++) {
+				ms.exec(
+					"select * from characters order by id",
+					null,
+					false,
+					callback
+				);
+			}
+		});
+	});
 });
 
 describe("#splitRow()", function () {
