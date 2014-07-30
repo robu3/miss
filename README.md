@@ -1,11 +1,11 @@
 # Miss
 ## Query executor, object-mapper thingy for Node.js +(Mi)crosoft (S)QL (S)erver
 
-I found myself using Node.js and SQL Server together in several projects, tied together with amazing [tedious module](https://github.com/pekim/tedious).
-However, managing all of the connections and all that jazz quickly grew cumbersome, and while I wrote some light wrappers/helpers to
-help, I quickly grew sick of all the copy-pasta.
+I found myself using Node.js and SQL Server together in several projects, tied together with the amazing [tedious module](https://github.com/pekim/tedious).
+However, managing all of the connections and all that other jazz quickly grew cumbersome, and while I wrote some light wrappers/helpers to
+help, I quickly grew sick of all the copy-pasta between projects.
 
-At the same time, I was yearning for something a bit like [Dapper](https://github.com/StackExchange/dapper-dot-net): a thin SQL-query-to-object-array library to make working with the data a bit easier. My goal is not to port the exact code of any existing library, but to replicate the same sort of functionality.
+At the same time, I was yearning for something a bit like [Dapper](https://github.com/StackExchange/dapper-dot-net): a thin SQL-query-to-object-array library to make working with SQL data a bit easier. My goal is not to port the exact code of any existing library, but to implement the same sort of functionality.
 
 Currently supported features:
 
@@ -15,5 +15,6 @@ Currently supported features:
 
 Todo items:
 
-- Add connection pooling
+- ~~Add connection pooling~~
 - Other stuff I haven't thought of yet
+- Add some more documentation and examples
